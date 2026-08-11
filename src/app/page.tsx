@@ -47,31 +47,39 @@ export default function Home() {
     {
       id: 0,
       title: "KOORDİNASYON",
-      badge: "PROFESYONEL DRİLLER",
+      badge: "DRİLLER",
       image: "https://images.unsplash.com/photo-1526232759582-705003c00454?q=80&w=600&auto=format&fit=crop",
-      tagline: "Motorik beceriler ve kondisyon"
+      desc: "Motorik Beceriler",
+      tagline: "Denge ve çeviklik çalışmaları"
     },
     {
       id: 1,
-      title: "TAKTIK & GELIŞIM",
-      badge: "ÖNE ÇIKAN EĞİTİM",
+      title: "TAKTIK & TEKNIK",
+      badge: "ELİT AKADEMİ",
       image: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=800&auto=format&fit=crop",
-      tagline: "Mevkisel taktik ve oyun zekası"
+      desc: "Oyun Zekası",
+      tagline: "Pas, kontrol ve mevkisel oyun"
     },
     {
       id: 2,
-      title: "NİZAMÎ ÇİM SAHA",
-      badge: "ELİT MAÇ GRUBU",
+      title: "MAÇ DENEYİMİ",
+      badge: "LİSANSLI GRUP",
       image: "https://images.unsplash.com/photo-1543351611-58f69d7c1781?q=80&w=600&auto=format&fit=crop",
-      tagline: "Takım ruhu ve maç tecrübesi"
+      desc: "Takım Ruhu",
+      tagline: "Nizami saha içi taktik mücadele"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-[#F1F5F9] text-[#0F172A] selection:bg-pitch-green selection:text-white relative overflow-x-hidden font-sans">
+    <div className="min-h-screen bg-[#F8FAFC] text-[#0F172A] selection:bg-pitch-green selection:text-white relative overflow-x-hidden font-sans">
       
+      {/* Soft Blurred Corporate Gradients in Background (Navy, Green, Gold) */}
+      <div className="absolute top-[-200px] left-[-200px] w-[600px] h-[600px] rounded-full bg-pitch-green/8 blur-[130px] pointer-events-none z-0" />
+      <div className="absolute top-[20%] right-[-200px] w-[700px] h-[700px] rounded-full bg-gold/6 blur-[150px] pointer-events-none z-0" />
+      <div className="absolute bottom-[10%] left-[-200px] w-[600px] h-[600px] rounded-full bg-navy/6 blur-[140px] pointer-events-none z-0" />
+
       {/* Textured Background Grid Overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(#0f172a_1.2px,transparent_1.2px)] [background-size:24px_24px] opacity-[0.04] pointer-events-none z-0" />
+      <div className="absolute inset-0 bg-[radial-gradient(#0f172a_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.03] pointer-events-none z-0" />
 
       {/* Dynamic Upper Accent Grid Line */}
       <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-navy via-pitch-green to-gold z-50" />
@@ -85,7 +93,7 @@ export default function Home() {
       </div>
 
       {/* Navigation */}
-      <nav className="sticky top-0 bg-[#F1F5F9]/90 backdrop-blur-md border-b border-[#0F172A]/5 z-40 transition-all duration-300">
+      <nav className="sticky top-0 bg-[#F8FAFC]/80 backdrop-blur-md border-b border-[#0F172A]/5 z-45 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             
@@ -154,7 +162,7 @@ export default function Home() {
 
         {/* Mobile Navigation Drawer */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-[#F1F5F9] border-b border-[#0F172A]/10 py-4 px-6 space-y-3 font-semibold text-base shadow-lg">
+          <div className="md:hidden bg-[#F8FAFC] border-b border-[#0F172A]/10 py-4 px-6 space-y-3 font-semibold text-base shadow-lg">
             <a
               href="#hakkimizda"
               onClick={() => setIsMobileMenuOpen(false)}
@@ -196,97 +204,120 @@ export default function Home() {
         )}
       </nav>
 
-      {/* Hero Section - Asymmetric, Premium Design */}
-      <section className="relative pt-8 pb-20 md:py-24 lg:py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      {/* Hero Section - Redesigned with Ambitious Typography & Spacing */}
+      <section className="relative pt-12 pb-24 md:py-28 lg:py-36 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         
-        {/* Dynamic decorative backdrop shapes (no dark/neon colors, subtle grays/creams and gold highlights) */}
-        <div className="absolute top-1/4 right-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl pointer-events-none -z-10" />
-        <div className="absolute top-1/3 left-10 w-72 h-72 bg-pitch-green/5 rounded-full blur-2xl pointer-events-none -z-10" />
-
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
-          {/* Left Column: Text & CTA */}
-          <div className="lg:col-span-6 flex flex-col items-start space-y-6 md:space-y-8 text-left">
+          {/* Left Column: Bold Typography & CTAs */}
+          <div className="lg:col-span-6 flex flex-col items-start space-y-8 text-left">
             
             {/* Tag/Badge */}
-            <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 text-gold-hover px-4 py-2 rounded-full font-black text-xs uppercase tracking-widest">
-              <span className="relative flex h-2.5 w-2.5">
+            <div className="inline-flex items-center gap-2 bg-[#16A34A]/8 border border-[#16A34A]/20 text-pitch-green px-4 py-2 rounded-full font-black text-xs uppercase tracking-widest">
+              <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-pitch-green opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-pitch-green"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-pitch-green"></span>
               </span>
-              2026 Güz Dönemi Futbol Akademisi Kayıtları Başladı
+              2026 GÜZ DÖNEMİ AKADEMİ KAYITLARI
             </div>
 
-            {/* Title & Copy */}
+            {/* Redesigned Ambitious Title */}
             <div className="space-y-4">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-black text-[#0F172A] tracking-tight uppercase leading-[1.1] max-w-2xl">
-                Geleceğin yıldızları sahaya çıkıyor! <br />
-                <span className="text-pitch-green relative inline-block transform -skew-y-1 bg-[#16A34A]/10 px-2 py-1 border-b-4 border-pitch-green mt-2">
-                  BilgeGenç Futbol Okulu
-                </span> başlıyor! 🏆
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-[#0F172A] tracking-tighter uppercase leading-[0.93]">
+                Geleceğin Yıldızları <br />
+                <span className="text-pitch-green relative inline-block transform -skew-y-1 bg-[#16A34A]/10 px-3 py-1 border-b-6 border-pitch-green mt-1">
+                  Sahaya Çıkıyor!
+                </span> <br />
+                BilgeGenç Başlıyor! 🏆
               </h1>
-              <p className="text-base md:text-lg text-[#0F172A]/85 font-medium leading-relaxed max-w-xl">
+              
+              <p className="text-base sm:text-lg md:text-xl text-[#0F172A]/80 font-medium leading-relaxed max-w-xl pt-2">
                 8-14 yaş arası sporcularımızı; disiplin, gelişim ve takım ruhuyla buluşturuyoruz. Çocuğunuzun hem sportif hem de kişisel gelişimine katkı sağlayacak bu yolculukta siz de yerinizi alın!
               </p>
             </div>
 
-            {/* Features checklist (Birebir İstenen Liste) */}
+            {/* Checklist with Minimalist Rounded Badges / SVG Icons (Lucide-Style) */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full pt-2">
+              
+              {/* Feature 1 */}
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-[#16A34A]/10 flex items-center justify-center text-pitch-green text-sm shrink-0">✅</div>
-                <span className="text-sm sm:text-base font-bold text-[#0F172A]/90">Profesyonel antrenman ortamı</span>
+                <div className="w-10 h-10 rounded-xl bg-[#16A34A]/10 border border-[#16A34A]/25 flex items-center justify-center shrink-0">
+                  <svg className="w-5 h-5 text-pitch-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <span className="text-sm sm:text-base font-black text-[#0F172A]/90">Profesyonel antrenman ortamı</span>
               </div>
+
+              {/* Feature 2 */}
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-[#16A34A]/10 flex items-center justify-center text-pitch-green text-sm shrink-0">✅</div>
-                <span className="text-sm sm:text-base font-bold text-[#0F172A]/90">Eğlenceli ve öğretici çalışmalar</span>
+                <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/25 flex items-center justify-center shrink-0">
+                  <svg className="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <span className="text-sm sm:text-base font-black text-[#0F172A]/90">Eğlenceli ve öğretici çalışmalar</span>
               </div>
+
+              {/* Feature 3 */}
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-[#16A34A]/10 flex items-center justify-center text-pitch-green text-sm shrink-0">✅</div>
-                <span className="text-sm sm:text-base font-bold text-[#0F172A]/90">Sınırlı kontenjan</span>
+                <div className="w-10 h-10 rounded-xl bg-[#16A34A]/10 border border-[#16A34A]/25 flex items-center justify-center shrink-0">
+                  <svg className="w-5 h-5 text-pitch-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <span className="text-sm sm:text-base font-black text-[#0F172A]/90">Sınırlı kontenjan</span>
               </div>
+
+              {/* Feature 4 */}
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-[#16A34A]/10 flex items-center justify-center text-pitch-green text-sm shrink-0">✅</div>
-                <span className="text-sm sm:text-base font-bold text-[#0F172A]/90">Erken kayıt fırsatı</span>
+                <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/25 flex items-center justify-center shrink-0">
+                  <svg className="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <span className="text-sm sm:text-base font-black text-[#0F172A]/90">Erken kayıt fırsatı</span>
               </div>
+
             </div>
 
-            {/* Accent Message & Contact (İstenen Vurgu) */}
-            <div className="w-full bg-[#0F172A]/5 border-l-4 border-gold p-4.5 rounded-r-xl">
-              <p className="text-sm font-extrabold text-[#0F172A] leading-relaxed">
-                📞 Detaylı bilgi ve kayıt için bizimle iletişime geçebilirsiniz.
+            {/* Accent Message (Birebir İstenen Vurgu) */}
+            <div className="w-full bg-[#0F172A]/5 border-l-4 border-gold p-4.5 rounded-r-2xl">
+              <p className="text-sm font-black text-[#0F172A]/90 leading-relaxed flex items-center gap-2">
+                <span>📞 Detaylı bilgi ve kayıt için bizimle iletişime geçebilirsiniz.</span>
               </p>
             </div>
 
-            {/* CTAs */}
+            {/* Redesigned Dynamic CTA Action Buttons */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto pt-2">
               <a
                 href="#kayit"
-                className="text-center bg-[#0F172A] hover:bg-pitch-green text-white font-extrabold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 transform hover:-translate-y-0.5"
+                className="relative inline-flex items-center justify-center px-8 py-4.5 font-black text-white bg-[#0F172A] rounded-xl overflow-hidden group shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]"
               >
-                <span>İletişim / Kayıt</span>
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-pitch-green to-pitch-green-hover transform scale-x-0 group-hover:scale-x-100 group-hover:origin-left transition-transform duration-500 ease-out z-0"></span>
+                <span className="relative z-10 flex items-center gap-2.5">
+                  <span>Kayıt Formunu Doldur</span>
+                  <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </span>
               </a>
               <a
-                href="#egitimler"
-                className="text-center bg-white hover:bg-slate-100 text-[#0F172A] font-bold px-8 py-4 rounded-xl border-2 border-[#0F172A]/10 hover:border-[#0F172A]/30 transition-all flex items-center justify-center gap-2"
+                href="tel:+902125554545"
+                className="text-center bg-white hover:bg-slate-100 text-[#0F172A] font-extrabold px-8 py-4.5 rounded-xl border-2 border-[#0F172A]/10 hover:border-[#0F172A]/30 transition-all flex items-center justify-center gap-2"
               >
-                Programları İncele
+                <span>Hemen Ara</span>
               </a>
             </div>
 
           </div>
 
-          {/* Right Column: Hero Visuals with 3 interactive slanted cards (/ / /) */}
+          {/* Right Column: Glassmorphic Slanted Visual Cards (/ / /) */}
           <div className="lg:col-span-6 flex items-center justify-center py-10 lg:py-0 w-full overflow-visible">
             
             {/* The 3 Slanted Cards Container (/ / /) */}
-            <div className="flex gap-3 sm:gap-4 md:gap-5 items-center transform -skew-x-12 select-none relative max-w-full">
+            <div className="flex gap-4 sm:gap-5 items-center transform -skew-x-12 select-none relative max-w-full">
               
-              {/* Backlight/glow card behind */}
-              <div className="absolute inset-0 bg-[#0f172a]/5 -skew-x-6 scale-105 rounded-3xl -z-20 blur-xl pointer-events-none" />
-
               {slantedCards.map((card, index) => {
                 const isActive = activeCard === index;
                 
@@ -295,49 +326,50 @@ export default function Home() {
                     key={card.id}
                     onMouseEnter={() => setActiveCard(index)}
                     onClick={() => setActiveCard(index)}
-                    className={`relative overflow-hidden rounded-2xl sm:rounded-3xl border-2 transition-all duration-500 ease-out cursor-pointer ${
+                    className={`relative rounded-3xl border transition-all duration-500 ease-out cursor-pointer flex flex-col p-3 sm:p-4 ${
                       isActive
-                        ? "w-36 sm:w-48 md:w-56 h-80 sm:h-[420px] md:h-[450px] border-pitch-green shadow-2xl z-20 scale-[1.03]"
-                        : "w-24 sm:w-32 md:w-36 h-64 sm:h-76 md:h-[360px] border-[#0F172A]/10 opacity-55 hover:opacity-85 z-0 scale-95"
+                        ? "w-36 sm:w-52 md:w-60 h-[360px] sm:h-[440px] md:h-[480px] bg-white/95 border-pitch-green/40 shadow-2xl z-20 scale-[1.03]"
+                        : "w-24 sm:w-36 md:w-40 h-[290px] sm:h-[360px] md:h-[390px] bg-white/80 backdrop-blur-md border-white/50 opacity-70 hover:opacity-90 z-0 scale-95 shadow-lg"
                     }`}
                   >
-                    {/* Top Accent Border on active */}
-                    <div className={`absolute top-0 left-0 right-0 h-1.5 z-20 transition-all duration-500 ${
-                      isActive ? "bg-pitch-green" : "bg-transparent"
-                    }`} />
-                    
-                    {/* Dark Vignette Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-[#0F172A]/20 to-transparent z-10" />
-                    
-                    {/* Compensate skew-x of parent (-12deg) to keep image straight, scale to crop corners */}
-                    <div className="w-full h-full transform skew-x-12 scale-[1.35] relative transition-transform duration-500">
-                      <img
-                        src={card.image}
-                        alt={card.title}
-                        className={`w-full h-full object-cover transition-all duration-500 ${
-                          isActive ? "brightness-105" : "brightness-90 grayscale-[20%]"
-                        }`}
-                      />
+                    {/* Visual Card Image Box (Slanted inside, compensated unskewed photo) */}
+                    <div className={`w-full overflow-hidden rounded-2xl relative border border-[#0F172A]/5 transition-all duration-500 ${
+                      isActive ? "h-[200px] sm:h-[260px] md:h-[290px]" : "h-[140px] sm:h-[180px] md:h-[200px]"
+                    }`}>
+                      <div className="w-full h-full transform skew-x-12 scale-[1.35] relative">
+                        <img
+                          src={card.image}
+                          alt={card.title}
+                          className={`w-full h-full object-cover transition-all duration-500 ${
+                            isActive ? "brightness-105" : "brightness-95 grayscale-[10%]"
+                          }`}
+                        />
+                      </div>
                     </div>
                     
-                    {/* Card details */}
-                    <div className="absolute bottom-4 left-4 right-4 z-20 transform skew-x-12 transition-all duration-500">
-                      {isActive && (
-                        <span className="inline-flex items-center gap-1 text-[8px] sm:text-[10px] font-black text-white bg-gold px-2 py-0.5 rounded uppercase tracking-wider mb-1 animate-pulse">
-                          {card.badge}
-                        </span>
-                      )}
-                      <h3 className={`text-white font-black uppercase leading-tight tracking-tight transition-all duration-500 ${
+                    {/* Glassmorphic Text Hierarchy */}
+                    <div className="mt-3.5 flex flex-col items-start text-left transform skew-x-12">
+                      <span className={`font-black uppercase tracking-wider transition-all duration-500 ${
+                        isActive ? "text-[10px] text-pitch-green" : "text-[8px] text-[#0F172A]/50"
+                      }`}>
+                        {card.badge}
+                      </span>
+                      <h3 className={`font-black uppercase tracking-tight text-[#0F172A] mt-1 leading-none transition-all duration-500 ${
                         isActive ? "text-sm sm:text-lg md:text-xl" : "text-xs"
                       }`}>
                         {card.title}
                       </h3>
-                      {isActive && (
-                        <p className="text-white/80 text-[8px] sm:text-[10px] mt-1 font-semibold uppercase tracking-wider hidden sm:block">
-                          {card.tagline}
-                        </p>
-                      )}
+                      <p className={`text-[#0F172A]/60 font-semibold mt-1.5 leading-tight transition-all duration-500 ${
+                        isActive ? "text-[10px] sm:text-xs block" : "hidden"
+                      }`}>
+                        {card.tagline}
+                      </p>
                     </div>
+
+                    {/* Small layout indicator dot */}
+                    {isActive && (
+                      <div className="absolute top-4 right-4 w-2.5 h-2.5 rounded-full bg-pitch-green z-30 animate-pulse transform skew-x-12" />
+                    )}
                   </div>
                 );
               })}
@@ -350,10 +382,9 @@ export default function Home() {
 
       </section>
 
-      {/* Çapraz Duyuru Şeridi (İstenen Revizyon: Metinler de şeritle birlikte yatsın!) */}
+      {/* Skewed Ribbon Banner */}
       <div className="relative w-full h-20 bg-gradient-to-br from-[#0F172A] to-[#1e293b] text-white py-4 overflow-hidden transform -skew-y-3 z-30 shadow-lg mt-10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(34,197,94,0.15),rgba(255,255,255,0))]" />
-        {/* Yazı düz kalmasın (counter-skew edilmedi), şeritle birlikte -skew-y-3 olarak yatsın */}
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-around font-black uppercase text-xs md:text-sm tracking-widest select-none animate-marquee gap-8 whitespace-nowrap">
           <span>★ GELECEĞİN YILDIZLARI SAHAYA ÇIKIYOR</span>
           <span className="text-gold">★ BİLGEGENÇ SPOR AKADEMİSİ</span>
@@ -365,7 +396,7 @@ export default function Home() {
       </div>
 
       {/* Biz Kimiz / Hakkımızda Section - Asymmetric Grid Layout */}
-      <section id="hakkimizda" className="pt-32 pb-20 bg-[#F1F5F9] relative z-10">
+      <section id="hakkimizda" className="pt-32 pb-20 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -424,8 +455,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Box 3 (Soft Gold border, cream base) */}
-            <div className="bg-white border-2 border-gold/40 p-8 rounded-3xl flex flex-col justify-between group shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+            {/* Box 3 (Soft Gold border, glassmorphism base) */}
+            <div className="bg-white/60 backdrop-blur-md border border-white/70 p-8 rounded-3xl flex flex-col justify-between group shadow-lg transform hover:-translate-y-1 transition-all duration-300">
               <div className="space-y-4">
                 <span className="text-pitch-green font-black text-xs uppercase tracking-widest">Antrenman Metodu</span>
                 <h3 className="text-xl font-black text-[#0F172A] uppercase tracking-tight">
@@ -442,7 +473,7 @@ export default function Home() {
             </div>
 
             {/* Box 4 (Navy and Gold asymmetric layout) */}
-            <div className="md:col-span-2 bg-white border-2 border-[#0F172A]/5 p-8 rounded-3xl relative overflow-hidden group shadow-lg flex flex-col justify-between transform hover:-translate-y-1 transition-all duration-300">
+            <div className="md:col-span-2 bg-white/40 backdrop-blur-sm border border-white/50 p-8 rounded-3xl relative overflow-hidden group shadow-md flex flex-col justify-between transform hover:-translate-y-1 transition-all duration-300">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
                 <div className="space-y-4">
                   <span className="text-pitch-green font-black text-xs uppercase tracking-widest">Sosyal Sorumluluk</span>
@@ -453,7 +484,7 @@ export default function Home() {
                     Türkiye ve Avrupa'nın önde gelen profesyonel kulüplerinin altyapı scoutları ile düzenlediğimiz hazırlık maçları ve seçmelerle sporcularımıza çıkış kapısı aralıyoruz.
                   </p>
                 </div>
-                <div className="relative h-44 rounded-2xl overflow-hidden border-2 border-[#0F172A]/10">
+                <div className="relative h-44 rounded-2xl overflow-hidden border border-[#0F172A]/10">
                   <img
                     src="https://images.unsplash.com/photo-1552667466-07770ae110d0?q=80&w=600&auto=format&fit=crop"
                     alt="Antrenör ve Genç Takım"
@@ -472,7 +503,7 @@ export default function Home() {
       </section>
 
       {/* Programlar Section - Modern Sports Brochure style (U9, U12, U15) */}
-      <section id="egitimler" className="py-24 bg-[#0F172A] text-white relative overflow-hidden">
+      <section id="egitimler" className="py-24 bg-[#0F172A] text-white relative overflow-hidden z-10">
         
         {/* Dynamic slanted divider */}
         <div className="absolute top-0 inset-x-0 h-4 bg-gradient-to-r from-gold via-pitch-green to-gold" />
@@ -609,7 +640,7 @@ export default function Home() {
       </section>
 
       {/* Kayıt ve Başvuru Formu - Interactive Section with Client Success State */}
-      <section id="kayit" className="py-24 bg-[#F1F5F9] relative z-10">
+      <section id="kayit" className="py-24 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
           <div className="bg-white border border-[#0F172A]/10 rounded-3xl shadow-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12">
@@ -699,7 +730,7 @@ export default function Home() {
                         id="birthYear"
                         name="birthYear"
                         required
-                        min="2010"
+                        min="2012"
                         max="2019"
                         value={formData.birthYear}
                         onChange={handleInputChange}
