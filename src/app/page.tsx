@@ -54,7 +54,7 @@ export default function Home() {
     },
     {
       id: 1,
-      title: "TAKTIK & TEKNIK",
+      title: "TAKTİK & TEKNİK",
       badge: "ELİT AKADEMİ",
       image: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=800&auto=format&fit=crop",
       desc: "Oyun Zekası",
@@ -84,13 +84,7 @@ export default function Home() {
       {/* Dynamic Upper Accent Grid Line */}
       <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-navy via-pitch-green to-gold z-50" />
 
-      {/* Top Banner */}
-      <div className="bg-[#0F172A] text-white text-xs py-2.5 px-4 text-center font-medium tracking-wider uppercase border-b border-white/5 relative z-40">
-        <span className="inline-flex items-center gap-1.5">
-          <span className="inline-block w-2 h-2 rounded-full bg-gold animate-pulse"></span>
-          Kayıtlar için Son Gün: <strong className="text-gold font-bold">15 Eylül 2026</strong>. Erken Kayıt Avantajlarını Kaçırmayın!
-        </span>
-      </div>
+
 
       {/* Navigation */}
       <nav className="sticky top-0 bg-[#F8FAFC]/80 backdrop-blur-md border-b border-[#0F172A]/5 z-45 transition-all duration-300">
@@ -204,192 +198,59 @@ export default function Home() {
         )}
       </nav>
 
-      {/* Hero Section - Redesigned with Ambitious Typography & Spacing */}
-      <section className="relative w-full overflow-hidden bg-slate-950 py-16 md:py-28 lg:py-36">
+      <section className="relative w-full h-[70vh] min-h-[580px] overflow-hidden bg-slate-950 flex items-center">
         {/* Background Video */}
         <video
-          src="/videos/hero-bg.mp4"
+          src="/videos/hero-video.mp4"
           autoPlay
           loop
           muted
           playsInline
-          className="absolute inset-0 object-cover w-full h-full"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-slate-950/60 md:bg-gradient-to-r md:from-slate-950/90 md:via-slate-950/60 md:to-transparent" />
+        {/* Overlay - Left to Right Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-950/50 to-transparent z-10" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col justify-center h-full">
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-            
-            {/* Left Column: Bold Typography & CTAs */}
-            <div className="lg:col-span-6 flex flex-col items-start space-y-8 text-left">
-              
-              {/* Tag/Badge */}
-              <div className="inline-flex items-center gap-2 bg-[#16A34A]/8 border border-[#16A34A]/20 text-pitch-green px-4 py-2 rounded-full font-black text-xs uppercase tracking-widest">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-pitch-green opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-pitch-green"></span>
+          {/* Left-aligned content layout */}
+          <div className="max-w-3xl flex flex-col justify-center items-start space-y-8 text-left py-4 pr-4 sm:pr-8 md:pr-16 lg:pr-20">
+
+            {/* Redesigned Ambitious Title */}
+            <div className="space-y-6">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tighter uppercase leading-tight md:leading-[1.05]">
+                Geleceğin Yıldızları <br />
+                <span className="text-pitch-green relative inline-block transform -skew-y-1 bg-pitch-green/20 px-4 py-2 border-b-6 border-pitch-green mt-2">
+                  Sahaya Çıkıyor!
                 </span>
-                2026 GÜZ DÖNEMİ AKADEMİ KAYITLARI
-              </div>
-
-              {/* Redesigned Ambitious Title */}
-              <div className="space-y-4">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tighter uppercase leading-[0.93]">
-                  Geleceğin Yıldızları <br />
-                  <span className="text-pitch-green relative inline-block transform -skew-y-1 bg-pitch-green/20 px-3 py-1 border-b-6 border-pitch-green mt-1">
-                    Sahaya Çıkıyor!
-                  </span> <br />
-                  BilgeGenç Başlıyor! 🏆
-                </h1>
-                
-                <p className="text-base sm:text-lg md:text-xl text-slate-200/90 font-medium leading-relaxed max-w-xl pt-2">
-                  8-14 yaş arası sporcularımızı; disiplin, gelişim ve takım ruhuyla buluşturuyoruz. Çocuğunuzun hem sportif hem de kişisel gelişimine katkı sağlayacak bu yolculukta siz de yerinizi alın!
-                </p>
-              </div>
-
-              {/* Checklist with Minimalist Rounded Badges / SVG Icons (Lucide-Style) */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full pt-2">
-                
-                {/* Feature 1 */}
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#16A34A]/10 border border-[#16A34A]/25 flex items-center justify-center shrink-0">
-                    <svg className="w-5 h-5 text-pitch-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                  </div>
-                  <span className="text-sm sm:text-base font-black text-slate-200">Profesyonel antrenman ortamı</span>
-                </div>
-
-                {/* Feature 2 */}
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/25 flex items-center justify-center shrink-0">
-                    <svg className="w-5 h-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <span className="text-sm sm:text-base font-black text-slate-200">Eğlenceli ve öğretici çalışmalar</span>
-                </div>
-
-                {/* Feature 3 */}
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#16A34A]/10 border border-[#16A34A]/25 flex items-center justify-center shrink-0">
-                    <svg className="w-5 h-5 text-pitch-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                  </div>
-                  <span className="text-sm sm:text-base font-black text-slate-200">Sınırlı kontenjan</span>
-                </div>
-
-                {/* Feature 4 */}
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/25 flex items-center justify-center shrink-0">
-                    <svg className="w-5 h-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <span className="text-sm sm:text-base font-black text-slate-200">Erken kayıt fırsatı</span>
-                </div>
-
-              </div>
-
-              {/* Accent Message (Birebir İstenen Vurgu) */}
-              <div className="w-full bg-white/10 backdrop-blur-sm border-l-4 border-gold p-4.5 rounded-r-2xl">
-                <p className="text-sm font-black text-slate-100 leading-relaxed flex items-center gap-2">
-                  <span>📞 Detaylı bilgi ve kayıt için bizimle iletişime geçebilirsiniz.</span>
-                </p>
-              </div>
-
-              {/* Redesigned Dynamic CTA Action Buttons */}
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto pt-2">
-                <a
-                  href="#kayit"
-                  className="relative inline-flex items-center justify-center px-8 py-4.5 font-black text-white bg-pitch-green rounded-xl overflow-hidden group shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]"
-                >
-                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-pitch-green-hover to-pitch-green transform scale-x-0 group-hover:scale-x-100 group-hover:origin-left transition-transform duration-500 ease-out z-0"></span>
-                  <span className="relative z-10 flex items-center gap-2.5">
-                    <span>Kayıt Formunu Doldur</span>
-                    <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </span>
-                </a>
-                <a
-                  href="tel:+902125554545"
-                  className="text-center bg-white hover:bg-slate-100 text-[#0F172A] font-extrabold px-8 py-4.5 rounded-xl border-2 border-white/10 hover:border-white/30 transition-all flex items-center justify-center gap-2"
-                >
-                  <span>Hemen Ara</span>
-                </a>
-              </div>
-
+              </h1>
+              
+              <p className="text-base sm:text-lg md:text-xl text-slate-200/90 font-medium leading-relaxed max-w-2xl pt-2">
+                8-14 yaş arası sporcularımızı; disiplin, gelişim ve takım ruhuyla buluşturuyoruz. Çocuğunuzun hem sportif hem de kişisel gelişimine katkı sağlayacak bu yolculukta siz de yerinizi alın!
+              </p>
             </div>
 
-            {/* Right Column: Glassmorphic Slanted Visual Cards (/ / /) */}
-            <div className="lg:col-span-6 flex items-center justify-center py-10 lg:py-0 w-full overflow-visible">
-              
-              {/* The 3 Slanted Cards Container (/ / /) */}
-              <div className="flex gap-4 sm:gap-5 items-center transform -skew-x-12 select-none relative max-w-full">
-                
-                {slantedCards.map((card, index) => {
-                  const isActive = activeCard === index;
-                  
-                  return (
-                    <div
-                      key={card.id}
-                      onMouseEnter={() => setActiveCard(index)}
-                      onClick={() => setActiveCard(index)}
-                      className={`relative rounded-3xl border transition-all duration-500 ease-out cursor-pointer flex flex-col p-3 sm:p-4 ${
-                        isActive
-                          ? "w-36 sm:w-52 md:w-60 h-[360px] sm:h-[440px] md:h-[480px] bg-white/95 border-pitch-green/40 shadow-2xl z-20 scale-[1.03]"
-                          : "w-24 sm:w-36 md:w-40 h-[290px] sm:h-[360px] md:h-[390px] bg-white/80 backdrop-blur-md border-white/50 opacity-70 hover:opacity-90 z-0 scale-95 shadow-lg"
-                      }`}
-                    >
-                      {/* Visual Card Image Box (Slanted inside, compensated unskewed photo) */}
-                      <div className={`w-full overflow-hidden rounded-2xl relative border border-[#0F172A]/5 transition-all duration-500 ${
-                        isActive ? "h-[200px] sm:h-[260px] md:h-[290px]" : "h-[140px] sm:h-[180px] md:h-[200px]"
-                      }`}>
-                        <div className="w-full h-full transform skew-x-12 scale-[1.35] relative">
-                          <img
-                            src={card.image}
-                            alt={card.title}
-                            className={`w-full h-full object-cover transition-all duration-500 ${
-                              isActive ? "brightness-105" : "brightness-95 grayscale-[10%]"
-                            }`}
-                          />
-                        </div>
-                      </div>
-                      
-                      {/* Glassmorphic Text Hierarchy */}
-                      <div className="mt-3.5 flex flex-col items-start text-left transform skew-x-12">
-                        <span className={`font-black uppercase tracking-wider transition-all duration-500 ${
-                          isActive ? "text-[10px] text-pitch-green" : "text-[8px] text-[#0F172A]/50"
-                        }`}>
-                          {card.badge}
-                        </span>
-                        <h3 className={`font-black uppercase tracking-tight text-[#0F172A] mt-1 leading-none transition-all duration-500 ${
-                          isActive ? "text-sm sm:text-lg md:text-xl" : "text-xs"
-                        }`}>
-                          {card.title}
-                        </h3>
-                        <p className={`text-[#0F172A]/60 font-semibold mt-1.5 leading-tight transition-all duration-500 ${
-                          isActive ? "text-[10px] sm:text-xs block" : "hidden"
-                        }`}>
-                          {card.tagline}
-                        </p>
-                      </div>
-
-                      {/* Small layout indicator dot */}
-                      {isActive && (
-                        <div className="absolute top-4 right-4 w-2.5 h-2.5 rounded-full bg-pitch-green z-30 animate-pulse transform skew-x-12" />
-                      )}
-                    </div>
-                  );
-                })}
-
-              </div>
-
+            {/* Redesigned Dynamic CTA Action Buttons */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-6 w-full sm:w-auto">
+              <a
+                href="#kayit"
+                className="relative inline-flex items-center justify-center px-8 py-4.5 font-black text-white bg-pitch-green rounded-xl overflow-hidden group shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]"
+              >
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-pitch-green-hover to-pitch-green transform scale-x-0 group-hover:scale-x-100 group-hover:origin-left transition-transform duration-500 ease-out z-0"></span>
+                <span className="relative z-10 flex items-center gap-2.5">
+                  <span>Kayıt Formunu Doldur</span>
+                  <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </span>
+              </a>
+              <a
+                href="tel:+902125554545"
+                className="text-center bg-white hover:bg-slate-100 text-[#0F172A] font-extrabold px-8 py-4.5 rounded-xl border-2 border-white/10 hover:border-white/30 transition-all flex items-center justify-center gap-2"
+              >
+                <span>Hemen Ara</span>
+              </a>
             </div>
 
           </div>
@@ -398,16 +259,104 @@ export default function Home() {
 
       </section>
 
+      {/* 3'lü Kart Bölümü - Eğitim ve Gelişim Grupları */}
+      <section className="bg-slate-50 py-20 relative z-20 border-b border-[#0F172A]/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <span className="text-xs font-black text-pitch-green uppercase tracking-widest bg-[#16A34A]/8 border border-[#16A34A]/20 px-4 py-2 rounded-full">
+              AKADEMİ PROGRAMLARI
+            </span>
+            <h2 className="text-3xl md:text-4xl font-black text-[#0F172A] uppercase pt-2">
+              Eğitim ve Gelişim Grupları
+            </h2>
+            <div className="w-16 h-1.5 bg-gold mx-auto rounded-full" />
+            <p className="text-slate-500 font-medium max-w-xl mx-auto text-sm sm:text-base">
+              Yaş gruplarına ve seviyelerine göre özelleştirilmiş antrenman metodolojimizle her sporcumuzun gelişimini yakından takip ediyoruz.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {slantedCards.map((card, index) => {
+              const isActive = activeCard === index;
+              return (
+                <div
+                  key={card.id}
+                  onMouseEnter={() => setActiveCard(index)}
+                  onClick={() => setActiveCard(index)}
+                  className={`bg-white rounded-3xl p-6 border transition-all duration-300 cursor-pointer flex flex-col justify-between shadow-md hover:shadow-xl hover:-translate-y-1.5 ${
+                    isActive 
+                      ? "border-pitch-green/40 ring-2 ring-pitch-green/10" 
+                      : "border-slate-100"
+                  }`}
+                >
+                  <div className="space-y-5">
+                    {/* Card Image */}
+                    <div className="w-full h-52 overflow-hidden rounded-2xl relative border border-slate-100">
+                      <img
+                        src={card.image}
+                        alt={card.title}
+                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                      />
+                      <span className="absolute top-3 left-3 bg-pitch-green text-white text-[10px] font-black px-3.5 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
+                        {card.badge}
+                      </span>
+                    </div>
+
+                    {/* Card Body */}
+                    <div className="space-y-2 text-left">
+                      <span className="text-xs font-black text-pitch-green tracking-widest uppercase">
+                        {card.desc}
+                      </span>
+                      <h3 className="text-xl font-extrabold text-[#0F172A] tracking-tight uppercase">
+                        {card.title}
+                      </h3>
+                      <p className="text-sm text-slate-500 font-semibold leading-relaxed">
+                        {card.tagline}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="pt-6 border-t border-slate-100 mt-6 flex items-center justify-between">
+                    <span className="text-xs font-black text-slate-400 uppercase tracking-wider">Detaylı Bilgi</span>
+                    <div className="w-9 h-9 rounded-full bg-slate-50 flex items-center justify-center text-[#0F172A] hover:bg-pitch-green hover:text-white transition-all">
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+        </div>
+      </section>
+
       {/* Skewed Ribbon Banner */}
-      <div className="relative w-full h-20 bg-gradient-to-br from-[#0F172A] to-[#1e293b] text-white py-4 overflow-hidden transform -skew-y-3 z-30 shadow-lg mt-10">
+      <div className="relative w-full h-20 bg-gradient-to-br from-[#0F172A] to-[#1e293b] text-white overflow-hidden transform -skew-y-3 z-30 shadow-lg mt-10 flex items-center">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(34,197,94,0.15),rgba(255,255,255,0))]" />
-        <div className="max-w-7xl mx-auto px-4 flex items-center justify-around font-black uppercase text-xs md:text-sm tracking-widest select-none animate-marquee gap-8 whitespace-nowrap">
-          <span>★ GELECEĞİN YILDIZLARI SAHAYA ÇIKIYOR</span>
-          <span className="text-gold">★ BİLGEGENÇ SPOR AKADEMİSİ</span>
-          <span>★ DİSİPLİN VE ELİT GELİŞİM</span>
-          <span className="text-pitch-green">★ 8-14 YAŞ GRUBU KAYITLARI</span>
-          <span>★ ERKEN KAYIT FIRSATLARI</span>
-          <span>★ PROFESYONEL ANTRENMAN ORTAMI</span>
+        
+        {/* Infinite Scrolling Container */}
+        <div className="w-full overflow-hidden whitespace-nowrap flex select-none pointer-events-none relative z-10">
+          <div className="flex animate-marquee gap-8 whitespace-nowrap text-lg sm:text-xl font-bold uppercase tracking-wider items-center">
+            <span>★ GELECEĞİN YILDIZLARI SAHAYA ÇIKIYOR</span>
+            <span className="text-gold">★ BİLGEGENÇ SPOR AKADEMİSİ</span>
+            <span>★ DİSİPLİN VE ELİT GELİŞİM</span>
+            <span className="text-pitch-green">★ 8-14 YAŞ GRUBU KAYITLARI</span>
+            <span>★ ERKEN KAYIT FIRSATLARI</span>
+            <span>★ PROFESYONEL ANTRENMAN ORTAMI</span>
+          </div>
+          
+          {/* Duplicate for seamless infinite loop */}
+          <div className="flex animate-marquee gap-8 whitespace-nowrap text-lg sm:text-xl font-bold uppercase tracking-wider items-center" aria-hidden="true">
+            <span>★ GELECEĞİN YILDIZLARI SAHAYA ÇIKIYOR</span>
+            <span className="text-gold">★ BİLGEGENÇ SPOR AKADEMİSİ</span>
+            <span>★ DİSİPLİN VE ELİT GELİŞİM</span>
+            <span className="text-pitch-green">★ 8-14 YAŞ GRUBU KAYITLARI</span>
+            <span>★ ERKEN KAYIT FIRSATLARI</span>
+            <span>★ PROFESYONEL ANTRENMAN ORTAMI</span>
+          </div>
         </div>
       </div>
 

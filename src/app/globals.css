@@ -27,3 +27,20 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  flex-shrink: 0;
+  min-width: 100%;
+  gap: 2rem;
+  animation: marquee-scroll 35s linear infinite;
+}
